@@ -22,6 +22,8 @@ The repository is organized as follows:
 ### Prerequisites
 To run the project code, you will need **Python 3.x** and **MATLAB**. The required Python dependencies can be automatically installed using the provided requirements file. However, the uploaded python files are python notebook that can be run directly on Google Colab, for the sake of simplicity. Thus, the packages listed in the `requirements.txt` file are only needed in case you want to adapt them for being run locally in your own computer.
 
+In any case, independently from where you decide to run the python code, you must update the path of the PRECOMPUTED_DIR varibale in the python codes, as well as the paths where you are going to load both the features and raw signals (variables *df_feat* and *signals_mat* in block 2A).
+
 ### Installation
 1. Clone this repository:
    ```bash
@@ -38,7 +40,7 @@ The dataset used in this study is publicly available for reproducibility. You ca
 * **DOI:** https://doi.org/10.5281/zenodo.23337725
 
 ## 🔬 Usage
-Each folder inside `codigo/` contains specific scripts for its corresponding stage:
+Each folder contains specific scripts for its corresponding stage:
 1. **Experiments 1 & 2:** Navigate to `experiment_1_and_2/` to run feature extraction and traditional ML classifiers.
 2. **Experiment 3:** Check `experiment_3/` to evaluate deep learning baselines and to train the proposed multi-scale temporal hybrid model using only 9 handcrafted features.
 3. **Experiment 4 (MST-Conformer):** Check `experiment_4/` to train and evaluate the proposed multi-scale temporal hybrid model under 15-fold LOSO cross-validation and the traditional ML algorithms using all the 27 handcrafted features.

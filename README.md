@@ -11,17 +11,16 @@ Monitoring autonomic nervous system responses offers significant potential for p
 
 ## 📂 Repository Structure
 The repository is organized as follows:
-* `codigo/` - Contains all the source code, scripts, and Jupyter notebooks used for data preprocessing, model training, and evaluation.
+* `experiment_1_2/` - Scripts and notebooks for Experiments 1 and 2 (Conventional ML and feature analysis).
+* `experiment_3/` - Deep learning baseline models and  the proposed Hybrid MST-Conformer model (using only 9 features).
+* `experiment_4/` - Implementation and training of the proposed Hybrid MST-Conformer model and conventional ML models, both using 27 features.
+* `requirements.txt` - File containing all required Python libraries, in case you decide to run the code locally instead of in Google Colab.
 * `LICENSE` - MIT License terms.
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-To run the code, you will need **Python 3.x** [o R, cambia el lenguaje si es necesario] and the following libraries:
-* `numpy`
-* `pandas`
-* `scikit-learn`
-* [Añade aquí otras librerías clave que uses, como scipy, tensorflow, pytorch, etc.]
+To run the project code, you will need **Python 3.x** and **MATLAB**. The required Python dependencies can be automatically installed using the provided requirements file. However, the uploaded python files are python notebook that can be run directly on Google Colab, for the sake of simplicity. Thus, the packages listed in the `requirements.txt` file are only needed in case you want to adapt them for being run locally in your own computer.
 
 ### Installation
 1. Clone this repository:
@@ -35,14 +34,14 @@ To run the code, you will need **Python 3.x** [o R, cambia el lenguaje si es nec
 
 ## 📊 Data Availability
 The dataset used in this study is publicly available for reproducibility. You can download the biosignal data from the following permanent repository:
-* **Repository:** [Zenodo / Figshare / etc.]
-* **DOI:** [Pega aquí el enlace al DOI de tus datos cuando lo tengas, ej: https://doi.org]
+* **Repository:** Zenodo: `Dataset for: Detection and Classification of Physiological Activation States Through Biosignal Analysis Using Machine Learning`
+* **DOI:** https://doi.org/10.5281/zenodo.23337725
 
 ## 🔬 Usage
-To replicate the results or train the models, follow these steps:
-1. **Preprocessing:** Run `codigo/preprocessing.py` to clean the raw biosignals.
-2. **Model Training:** Run `codigo/train.py` to train the Machine Learning classifiers.
-[Modifica estos pasos según cómo se llamen tus scripts reales y cómo se ejecuten].
+Each folder inside `codigo/` contains specific scripts for its corresponding stage:
+1. **Experiments 1 & 2:** Navigate to `experiment_1_and_2/` to run feature extraction and traditional ML classifiers.
+2. **Experiment 3:** Check `experiment_3/` to evaluate deep learning baselines and to train the proposed multi-scale temporal hybrid model using only 9 handcrafted features.
+3. **Experiment 4 (MST-Conformer):** Check `experiment_4/` to train and evaluate the proposed multi-scale temporal hybrid model under 15-fold LOSO cross-validation and the traditional ML algorithms using all the 27 handcrafted features.
 
 ## ✉️ Contact
 For any questions, issues, or collaborations, please contact:
